@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+
+    function howOld(value) {
+        if (value > currentYear) {
+            alert("Không hợp lệ");
+        } else if ( value == currentYear ) {
+            alert("Bạn chỉ vừa mới đẻ năm nay")
+        } else {
+            alert("Số tuổi của bạn là " + (currentYear - value))
+        }
+    }
+
+    let year = prompt("Nhập năm sinh của bạn");
+    year = parseInt(year);
+
+    if(isNaN(year) == true) {
+        alert("Khong hop le")
+    } else {
+        howOld(year);
+    }
+
+
+</script>
+
+</body>
+</html>
